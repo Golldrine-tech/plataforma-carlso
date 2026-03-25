@@ -97,3 +97,8 @@
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.15); }
 }
+
+@keyframes stat-pulse {
+  0%, 100% { opacity: 0.85; text-shadow: 0 0 0px transparent; }
+  50% { opacity: 1; text-shadow: 0 0 12px hsl(var(--accent) / 0.5); }
+}
