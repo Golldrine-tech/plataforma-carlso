@@ -101,6 +101,19 @@ const ToolsSection = () => {
             </video>
           </div>
         </div>
+
+        <div className="flex justify-center">
+          <a
+            href="https://wa.me/5561982262436?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20reuni%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 py-4 rounded-full text-lg transition-colors"
+          >
+            Solicitar Reunião
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
