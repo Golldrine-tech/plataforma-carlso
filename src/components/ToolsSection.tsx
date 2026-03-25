@@ -1,4 +1,3 @@
-import heroDevices from "@/assets/hero-devices.jpg";
 import { CreditCard, Tag, FileText, Wifi } from "lucide-react";
 
 const tools = [
