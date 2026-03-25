@@ -39,7 +39,7 @@ const ToolsSection = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <Wifi className="w-5 h-5 text-teal" />
             <span className="text-xs font-bold tracking-widest uppercase text-teal">
-              Dispositivos NFC
+              Dispositivos Tecnológicos
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
