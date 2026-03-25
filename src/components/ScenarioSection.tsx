@@ -23,7 +23,7 @@ const ScenarioSection = () => {
           {/* Right column - cards */}
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+              <div className="icon-glow w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
                 <Leaf className="w-7 h-7 text-accent" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-3">Compromisso Ambiental</h3>
@@ -34,7 +34,7 @@ const ScenarioSection = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+              <div className="icon-glow w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
                 <Clock className="w-7 h-7 text-accent" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-3">Disponibilidade Total</h3>

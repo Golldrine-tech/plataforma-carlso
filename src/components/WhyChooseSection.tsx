@@ -36,7 +36,7 @@ const WhyChooseSection = () => {
               {i < reasons.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-[60%] w-[80%] border-t-2 border-dashed border-muted-foreground/20" />
               )}
-              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+              <div className="icon-glow w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
                 <reason.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{reason.title}</h3>
