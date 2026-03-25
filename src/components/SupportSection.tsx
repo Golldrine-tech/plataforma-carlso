@@ -33,7 +33,7 @@ const SupportSection = () => {
 
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <div className="icon-glow w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                   <MessageSquare className="w-6 h-6 text-accent" />
                 </div>
                 <div>
@@ -46,7 +46,7 @@ const SupportSection = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <div className="icon-glow w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-6 h-6 text-accent" />
                 </div>
                 <div>

@@ -58,7 +58,7 @@ const ToolsSection = () => {
               key={tool.title}
               className="bg-navy-light/50 backdrop-blur rounded-2xl p-8 border border-primary-foreground/10 hover:border-teal/40 transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-teal/20 flex items-center justify-center mb-5">
+              <div className="icon-glow w-12 h-12 rounded-xl bg-teal/20 flex items-center justify-center mb-5">
                 <tool.icon className="w-6 h-6 text-teal" />
               </div>
               <h3 className="text-xl font-bold mb-1">{tool.title}</h3>
