@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 import { Wifi, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -7,9 +8,16 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
         width={1920}
         height={1080}
+      />
+      <img
+        src={heroBgMobile}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover md:hidden"
+        width={720}
+        height={1280}
       />
       <div className="absolute inset-0 bg-primary/80" />
       
