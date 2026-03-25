@@ -66,7 +66,7 @@ const ToolsSection = () => {
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
                 {tool.description}
               </p>
-              <div className="flex items-center gap-3 pt-4 border-t border-primary-foreground/10">
+              <div className="flex items-center gap-3 pt-4">
                 <span className="text-3xl font-extrabold text-accent">{tool.stat}</span>
                 <span className="text-xs text-primary-foreground/50 uppercase tracking-wider font-semibold">
                   {tool.statLabel}
