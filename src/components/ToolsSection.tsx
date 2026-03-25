@@ -56,7 +56,7 @@ const ToolsSection = () => {
           {tools.map((tool) => (
             <div
               key={tool.title}
-              className="bg-navy-light/50 backdrop-blur rounded-2xl p-8 border border-primary-foreground/10 hover:border-teal/40 transition-colors"
+              className="bg-primary-foreground/5 backdrop-blur-md rounded-2xl p-8 border border-primary-foreground/10 hover:border-teal/40 hover:bg-primary-foreground/10 transition-all"
             >
               <div className="icon-glow w-12 h-12 rounded-xl bg-teal/20 flex items-center justify-center mb-5">
                 <tool.icon className="w-6 h-6 text-teal" />
@@ -67,8 +67,8 @@ const ToolsSection = () => {
                 {tool.description}
               </p>
               <div className="flex items-center gap-3 pt-4">
-                <span className="text-3xl font-extrabold text-accent">{tool.stat}</span>
-                <span className="text-xs text-primary-foreground/50 uppercase tracking-wider font-semibold">
+                <span className="text-3xl font-extrabold text-accent animate-stat-pulse">{tool.stat}</span>
+                <span className="text-xs text-primary-foreground/50 uppercase tracking-wider font-semibold animate-stat-pulse">
                   {tool.statLabel}
                 </span>
               </div>
@@ -76,13 +76,7 @@ const ToolsSection = () => {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-8">
-          <img
-            src={heroDevices}
-            alt="Dispositivos Golldrine - Cartão, Tag e Santinho Tecnológicos"
-            className="rounded-2xl max-w-lg w-full shadow-2xl"
-            loading="lazy"
-          />
+        <div className="flex justify-center">
           <a
             href="https://wa.me/5561982262436?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20reuni%C3%A3o."
             target="_blank"
@@ -92,8 +86,6 @@ const ToolsSection = () => {
             Solicitar Reunião
           </a>
         </div>
-      </div>
-    </section>
   );
 };
 
