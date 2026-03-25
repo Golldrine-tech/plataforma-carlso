@@ -1,4 +1,4 @@
-import { CreditCard, Tag, FileText, Wifi } from "lucide-react";
+import { CreditCard, Tag, FileText, Wifi, Play } from "lucide-react";
 
 const tools = [
   {
@@ -51,7 +51,7 @@ const ToolsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {tools.map((tool) => (
             <div
               key={tool.title}
@@ -75,18 +75,32 @@ const ToolsSection = () => {
           ))}
         </div>
 
-        <div className="flex justify-center">
-          <a
-            href="https://wa.me/5561982262436?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20reuni%C3%A3o."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 py-4 rounded-full text-lg transition-colors"
-          >
-            Solicitar Reunião
-          </a>
+        {/* Video Card */}
+        <div className="bg-primary-foreground/5 backdrop-blur-md rounded-2xl p-8 border border-primary-foreground/10 hover:border-teal/40 hover:bg-primary-foreground/10 transition-all mb-16">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="icon-glow w-12 h-12 rounded-xl bg-teal/20 flex items-center justify-center shrink-0">
+              <Play className="w-6 h-6 text-teal" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-xl font-bold mb-1">Veja na Prática</h3>
+              <p className="text-teal text-sm font-medium mb-2">Demonstração em Vídeo</p>
+              <p className="text-primary-foreground/60 text-sm leading-relaxed">
+                Confira como nossos dispositivos tecnológicos funcionam no dia a dia da campanha.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 rounded-xl overflow-hidden">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full rounded-xl max-h-[500px] bg-black/30"
+            >
+              <source src="/videos/daniel.mov" type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
         </div>
-      </div>
-    </section>
   );
 };
 
