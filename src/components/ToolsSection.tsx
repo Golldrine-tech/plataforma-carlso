@@ -86,6 +86,8 @@ const ToolsSection = () => {
             Solicitar Reunião
           </a>
         </div>
+      </div>
+    </section>
   );
 };
 
