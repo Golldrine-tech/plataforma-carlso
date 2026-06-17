@@ -1,0 +1,23 @@
+FOTOS DO SITE — onde salvar e com quais nomes
+=============================================
+
+Salve as 3 fotos do Carlos NESTA pasta (public/fotos/), com EXATAMENTE
+estes nomes (tudo minúsculo, extensão .jpg):
+
+1) carlos-podcast.jpg
+   -> Foto do podcast (terno azul, microfone, olhando para a câmera).
+   -> É o RETRATO PRINCIPAL (faixa central da hero).
+
+2) carlos-retrato.jpg
+   -> Foto de braços cruzados (terno azul).
+
+3) carlos-evento.jpg
+   -> Foto em pé com microfone, na "Marcha em Defesa dos Municípios".
+
+Assim que os arquivos estiverem aqui, é só atualizar o navegador
+(http://localhost:8080/) que as fotos aparecem automaticamente na hero
+e na seção "Quem somos". Enquanto não estiverem, o site mostra um
+placeholder elegante no lugar — nada quebra.
+
+Dica: se quiser trocar por outras fotos depois, basta sobrescrever os
+arquivos mantendo os mesmos nomes.

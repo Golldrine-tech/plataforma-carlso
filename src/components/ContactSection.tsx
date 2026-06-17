@@ -1,54 +1,89 @@
-import productsShowcase from "@/assets/products-showcase.jpg";
-import { Phone, Globe, Mail, Instagram } from "lucide-react";
-
-const contacts = [
-  { icon: Phone, label: "(61) 98222-4180", href: "tel:+5561982224180" },
-  { icon: Globe, label: "www.golldrine.com", href: "https://www.golldrine.com" },
-  { icon: Mail, label: "golldrinetech@gmail.com", href: "mailto:golldrinetech@gmail.com" },
-  { icon: Instagram, label: "@golldrine", href: "https://instagram.com/golldrine" },
-];
+import { MessageCircle, Mail, Instagram, Youtube, Phone } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import { site } from "@/lib/site";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-24 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left */}
-          <div>
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-4">Obrigado!</h2>
-            <p className="text-primary-foreground/60 text-lg mb-10 max-w-md">
-              Solicite um <strong className="text-primary-foreground">orçamento personalizado</strong> para
-              a sua campanha e descubra como podemos levar sua mensagem mais longe.
-            </p>
-            <img
-              src={productsShowcase}
-              alt="Produtos Golldrine"
-              className="rounded-2xl w-full max-w-md shadow-xl"
-              loading="lazy"
-            />
-          </div>
+    <section id="contato" className="relative overflow-hidden py-20 md:py-28">
+      <div className="aurora" />
+      <div className="perspective-grid opacity-60" />
+      <div className="container relative z-10 grid gap-14 lg:grid-cols-2 lg:items-center">
+        <Reveal>
+          <div className="glow-rule" />
+          <h2 className="mt-6 font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            Vamos conversar sobre a sua demanda?
+          </h2>
+          <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
+            Atendimento direto e estratégico para gestores, câmaras e parlamentares.
+          </p>
+          <a
+            href={site.whatsappPrimary}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-accent-foreground transition-all hover:scale-[1.03] hover:glow-gold"
+          >
+            <MessageCircle className="h-5 w-5" strokeWidth={2} />
+            Falar no WhatsApp agora
+          </a>
+        </Reveal>
 
-          {/* Right */}
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Nossos Contatos</h3>
-            <div className="space-y-4">
-              {contacts.map((c) => (
-                <a
-                  key={c.label}
-                  href={c.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 bg-navy-light/50 backdrop-blur rounded-xl px-6 py-5 border border-primary-foreground/10 hover:border-teal/40 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center shrink-0">
-                    <c.icon className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <span className="font-medium">{c.label}</span>
-                </a>
-              ))}
-            </div>
+        <Reveal delay={0.15}>
+          <div className="glass-strong rounded-3xl p-7 sm:p-9">
+            <h3 className="font-display text-xl font-semibold text-foreground">Contato direto</h3>
+            <ul className="mt-6 space-y-5 text-muted-foreground">
+              <li className="flex items-start gap-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gold">
+                  <Phone className="h-4 w-4" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/70">WhatsApp</p>
+                  <a href={site.whatsappPrimary} target="_blank" rel="noopener noreferrer" className="block text-foreground/90 hover:text-gold">
+                    {site.phones[0]}
+                  </a>
+                  <a href={site.whatsappSecondary} target="_blank" rel="noopener noreferrer" className="block text-foreground/90 hover:text-gold">
+                    {site.phones[1]}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gold">
+                  <Mail className="h-4 w-4" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/70">E-mail</p>
+                  <a href={`mailto:${site.email}`} className="text-foreground/90 hover:text-gold">
+                    {site.email}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gold">
+                  <Instagram className="h-4 w-4" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/70">Instagram</p>
+                  <a href={site.instagram.firm.url} target="_blank" rel="noopener noreferrer" className="block text-foreground/90 hover:text-gold">
+                    {site.instagram.firm.handle}
+                  </a>
+                  <a href={site.instagram.cast.url} target="_blank" rel="noopener noreferrer" className="block text-foreground/90 hover:text-gold">
+                    {site.instagram.cast.handle}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gold">
+                  <Youtube className="h-4 w-4" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/70">YouTube</p>
+                  <a href={site.youtube} target="_blank" rel="noopener noreferrer" className="text-foreground/90 hover:text-gold">
+                    MuniBrasilCast
+                  </a>
+                </div>
+              </li>
+            </ul>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

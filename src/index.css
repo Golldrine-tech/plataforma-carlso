@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,49 +6,52 @@
 
 @layer base {
   :root {
-    --background: 220 20% 96%;
-    --foreground: 222 47% 11%;
+    /* Tema dark — preto-azulado / grafite */
+    --background: 221 42% 9%;          /* #0D1320 */
+    --background-deep: 216 33% 6%;     /* #0A0E14 */
+    --foreground: 213 40% 94%;         /* branco-gelo #EAF0F7 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 220 40% 12%;               /* #121A2A */
+    --card-foreground: 213 40% 94%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 220 42% 11%;
+    --popover-foreground: 213 40% 94%;
 
-    --primary: 222 47% 15%;
-    --primary-foreground: 210 40% 98%;
+    /* Azul — cor principal / confiança */
+    --primary: 214 74% 45%;            /* azul vivo #1E66C7 */
+    --primary-foreground: 0 0% 100%;
+    --blue-deep: 210 71% 25%;          /* azul profundo #123E6B */
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 220 35% 16%;
+    --secondary-foreground: 213 40% 94%;
 
-    --muted: 220 14% 92%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 218 21% 67%;   /* cinza-claro #9AA7BD */
 
-    --accent: 152 69% 40%;
-    --accent-foreground: 0 0% 100%;
+    /* Amarelo — destaque / CTAs */
+    --accent: 45 88% 57%;              /* dourado-amarelo #F2C230 */
+    --accent-foreground: 221 42% 9%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    /* Verde — secundária / detalhes */
+    --green-brand: 148 67% 37%;        /* #1F9E5A */
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 15%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.75rem;
+    --border: 215 30% 22%;
+    --input: 215 30% 22%;
+    --ring: 45 88% 57%;
 
-    --navy: 222 47% 15%;
-    --navy-light: 222 30% 25%;
-    --teal: 190 80% 42%;
-    --green-brand: 152 69% 40%;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 40% 12%;
+    --sidebar-foreground: 213 40% 94%;
+    --sidebar-primary: 214 74% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 16%;
+    --sidebar-accent-foreground: 213 40% 94%;
+    --sidebar-border: 215 30% 22%;
+    --sidebar-ring: 45 88% 57%;
   }
 }
 
@@ -58,47 +61,164 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: hsl(var(--background-deep));
   }
 
   html {
     scroll-behavior: smooth;
   }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    letter-spacing: -0.02em;
+  }
+
+  #inicio,
+  #inicio h1,
+  #inicio h2,
+  #inicio h3,
+  #inicio h4 {
+    font-family: 'Montserrat', Inter, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 3px;
+  }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--teal)), hsl(var(--green-brand)));
+  /* ---------- Glassmorphism ---------- */
+  .glass {
+    background: hsl(var(--card) / 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.08);
   }
 
-  .icon-glow {
-    position: relative;
-    animation: icon-pulse 2.5s ease-in-out infinite;
+  .glass-strong {
+    background: hsl(var(--card) / 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.1);
   }
 
-  .icon-glow::after {
-    content: "";
+  /* ---------- Glow ---------- */
+  .glow-blue {
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.4),
+      0 8px 40px -8px hsl(var(--primary) / 0.45);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 0 1px hsl(var(--green-brand) / 0.4),
+      0 8px 40px -8px hsl(var(--green-brand) / 0.45);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 24px -2px hsl(var(--accent) / 0.55);
+  }
+
+  .text-gold { color: hsl(var(--accent)); }
+  .text-blue { color: hsl(var(--primary)); }
+  .text-green { color: hsl(var(--green-brand)); }
+
+  /* Linha fina com brilho azul→verde */
+  .glow-rule {
+    height: 1px;
+    width: 4rem;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--green-brand)));
+    box-shadow: 0 0 12px hsl(var(--primary) / 0.6);
+    border-radius: 9999px;
+  }
+  .glow-rule-center { margin-inline: auto; }
+
+  /* ---------- Fundo aurora / mesh ---------- */
+  .aurora {
     position: absolute;
-    inset: -4px;
-    border-radius: inherit;
-    background: radial-gradient(circle, hsl(var(--accent) / 0.35), transparent 70%);
-    animation: glow-ping 2.5s ease-in-out infinite;
+    inset: -20%;
+    z-index: 0;
     pointer-events: none;
+    background:
+      radial-gradient(40% 50% at 20% 30%, hsl(var(--primary) / 0.35), transparent 60%),
+      radial-gradient(35% 45% at 80% 20%, hsl(var(--green-brand) / 0.28), transparent 60%),
+      radial-gradient(45% 55% at 65% 80%, hsl(var(--blue-deep) / 0.4), transparent 65%);
+    filter: blur(40px);
+    animation: aurora-drift 18s ease-in-out infinite alternate;
+  }
+
+  /* Grid em perspectiva */
+  .perspective-grid {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.12) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
   }
 }
 
-@keyframes icon-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
+/* ---------- Motion design ---------- */
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
-@keyframes glow-ping {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.15); }
+@keyframes marquee {
+  to { transform: translateX(-50%); }
 }
 
-@keyframes stat-pulse {
-  0%, 100% { opacity: 0.85; text-shadow: 0 0 0px transparent; }
-  50% { opacity: 1; text-shadow: 0 0 12px hsl(var(--accent) / 0.5); }
+/* Ken Burns sutil para fotos em destaque */
+.animate-slow-zoom {
+  animation: slow-zoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes slow-zoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.07); }
+}
+
+/* Anel de pulso lento (botão play) */
+.animate-ping-slow {
+  animation: ping-slow 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping-slow {
+  0%        { transform: scale(1); opacity: 0.35; }
+  75%, 100% { transform: scale(1.55); opacity: 0; }
+}
+
+@keyframes aurora-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(3%, -2%, 0) scale(1.08); }
+  100% { transform: translate3d(-2%, 3%, 0) scale(1.04); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--green-brand) / 0.5); }
+  50%      { box-shadow: 0 0 0 12px hsl(var(--green-brand) / 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

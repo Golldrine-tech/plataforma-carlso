@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,11 +51,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-        },
-        teal: "hsl(var(--teal))",
+        "background-deep": "hsl(var(--background-deep))",
+        "blue-deep": "hsl(var(--blue-deep))",
+        gold: "hsl(var(--accent))",
         "green-brand": "hsl(var(--green-brand))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
