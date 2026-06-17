@@ -75,8 +75,7 @@ const MuniBrasilCastSection = () => {
                       fallback={<span className="absolute inset-0 bg-white/5" />}
                     />
                     <span className="absolute inset-0 bg-gradient-to-t from-background-deep/70 to-transparent" />
-                    <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gold text-accent-foreground shadow-lg transition-transform group-hover:scale-110">
-                      <span className="animate-ping-slow absolute inset-0 rounded-full bg-gold/50" aria-hidden />
+                    <span className="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/70 bg-white/10 text-white shadow-lg backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:border-gold group-hover:text-gold">
                       <Play className="relative h-6 w-6 translate-x-0.5 fill-current" strokeWidth={0} />
                     </span>
                   </motion.a>
