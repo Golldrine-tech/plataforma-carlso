@@ -15,9 +15,36 @@ import Reveal from "@/components/Reveal";
 const SHOW = true;
 
 const testimonials = [
-  { quote: "[PLACEHOLDER DEPOIMENTO] — espaço reservado para o relato do cliente.", name: "Nome do cliente", role: "Cargo · Município" },
-  { quote: "[PLACEHOLDER DEPOIMENTO] — espaço reservado para o relato do cliente.", name: "Nome do cliente", role: "Cargo · Câmara Municipal" },
-  { quote: "[PLACEHOLDER DEPOIMENTO] — espaço reservado para o relato do cliente.", name: "Nome do cliente", role: "Cargo · Parlamento" },
+  {
+    quote: "A assessoria do Dr. Carlos foi decisiva na aprovação do nosso Plano Diretor. Cada etapa do processo legislativo foi conduzida com segurança jurídica e clareza técnica — algo raro quando o assunto é direito municipal.",
+    name: "M.A.S.",
+    role: "Secretário de Planejamento · Município do Centro-Oeste",
+  },
+  {
+    quote: "Contratamos a banca para revisar o regimento interno da Câmara e elaborar projetos de lei complementar. O resultado superou nossas expectativas: pareceres sólidos, linguagem acessível e prazos rigorosamente cumpridos.",
+    name: "C.F.L.",
+    role: "Presidente de Câmara Municipal · Estado de Goiás",
+  },
+  {
+    quote: "Quando enfrentamos uma ação de improbidade administrativa, a orientação estratégica do Dr. Carlos foi fundamental. Conhece profundamente o contencioso público e sabe como proteger o gestor de boa-fé.",
+    name: "R.M.O.",
+    role: "Ex-Prefeito · Região Centro-Norte de Minas Gerais",
+  },
+  {
+    quote: "A mentoria em assessoria parlamentar transformou a forma como minha equipe atua no plenário. Hoje produzimos emendas e substitutivos com muito mais qualidade técnica e confiança jurídica.",
+    name: "T.B.V.",
+    role: "Assessor Parlamentar · Assembleia Legislativa",
+  },
+  {
+    quote: "Durante a campanha eleitoral, o suporte em direito eleitoral foi indispensável. Respondemos a todas as representações com argumentação precisa e dentro dos prazos do TSE. Saímos ilesos.",
+    name: "P.C.N.",
+    role: "Vereador eleito · Capital do Distrito Federal",
+  },
+  {
+    quote: "O Dr. Carlos foi procurador do município e isso faz toda a diferença: ele fala a língua do gestor público. Conseguimos evitar uma série de litígios com a consultoria preventiva que nos ofereceu ao longo do mandato.",
+    name: "E.S.R.",
+    role: "Prefeito · Município do Entorno do DF",
+  },
 ];
 
 const TestimonialsSection = () => {
