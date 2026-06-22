@@ -9,7 +9,7 @@ const team = [
     oab: ["OAB/GO 59.408", "OAB/DF 86.833"],
     bio: "Especialista em Direito Administrativo, Municipal e Eleitoral, com atuação no consultivo e contencioso voltados à Administração Pública, gestão municipal e técnica legislativa. Já atuou como Assessora de Magistrado no TJ-GO e em diretorias jurídicas municipais.",
     accent: "green",
-    photo: undefined as string | undefined,
+    photo: "/fotos/daniella.jpg" as string | undefined,
   },
   {
     name: "Carlos Carvalho Rocha",
@@ -56,7 +56,7 @@ const TeamSection = () => {
                   <SmartImage
                     src={member.photo}
                     alt={member.name}
-                    className="h-full w-full object-cover object-top"
+                    className="h-[115%] w-[115%] object-cover object-center"
                     fallback={<UserRound className="h-12 w-12 text-muted-foreground/50" strokeWidth={1} />}
                   />
                 </div>
