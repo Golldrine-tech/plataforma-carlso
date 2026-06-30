@@ -172,7 +172,7 @@ function Navbar({ onCTA }: { onCTA: () => void }) {
       style={{ background: scrolled ? "rgba(5,9,14,0.92)" : "transparent", backdropFilter: scrolled ? "blur(16px)" : "none", borderBottom: scrolled ? "1px solid rgba(255,255,255,0.07)" : "none" }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-        <img src="/logo-munibrasil.svg" alt="MuniBrasil" className="h-8 w-auto" />
+        <img src="/logo-munibrasil.svg" alt="MuniBrasil" className="h-12 w-auto" />
 
         <div className="hidden md:flex items-center gap-8">
           {links.map(l => (
