@@ -827,6 +827,27 @@ function Footer() {
   );
 }
 
+/* ── whatsapp floating button ────────────────────────────── */
+function WhatsAppButton() {
+  return (
+    <a
+      href="https://wa.me/556198490772"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-2xl transition-transform hover:scale-110"
+      style={{ width: 60, height: 60, background: "#25D366" }}
+    >
+      {/* pulse ring */}
+      <span className="absolute inline-flex h-full w-full rounded-full opacity-40 animate-ping" style={{ background: "#25D366" }} />
+      {/* whatsapp icon */}
+      <svg viewBox="0 0 32 32" width="30" height="30" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C8.268 2 2 8.268 2 16c0 2.48.68 4.8 1.865 6.79L2 30l7.42-1.835A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Zm0 25.5a11.44 11.44 0 0 1-5.832-1.594l-.418-.248-4.4 1.088 1.11-4.283-.272-.44A11.46 11.46 0 0 1 4.5 16C4.5 9.648 9.648 4.5 16 4.5S27.5 9.648 27.5 16 22.352 27.5 16 27.5Zm6.29-8.618c-.344-.172-2.036-1.004-2.352-1.118-.316-.116-.546-.172-.776.172-.228.344-.892 1.118-1.094 1.348-.2.228-.402.258-.746.086-.344-.172-1.452-.536-2.766-1.706-1.022-.912-1.712-2.038-1.912-2.382-.2-.344-.022-.53.15-.702.154-.154.344-.402.516-.602.172-.2.228-.344.344-.574.116-.228.058-.43-.028-.602-.086-.172-.776-1.872-1.064-2.564-.28-.672-.564-.58-.776-.592l-.66-.012c-.228 0-.6.086-.914.43-.316.344-1.204 1.176-1.204 2.866 0 1.69 1.232 3.322 1.404 3.552.172.228 2.424 3.702 5.872 5.192.82.354 1.46.566 1.958.724.822.262 1.572.224 2.164.136.66-.098 2.036-.832 2.324-1.636.286-.804.286-1.494.2-1.636-.084-.144-.314-.23-.658-.4Z" />
+      </svg>
+    </a>
+  );
+}
+
 /* ── main export ─────────────────────────────────────────── */
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -843,6 +864,7 @@ export default function LandingPage() {
       <PricingSection onCTA={toPlataforma} />
       <FinalCTA onCTA={toPlataforma} />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
