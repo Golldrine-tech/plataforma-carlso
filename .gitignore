@@ -31,5 +31,9 @@ public/videos/
 *.mov
 *.mp4
 
+# Bun lockfiles (use npm/package-lock.json instead)
+bun.lock
+bun.lockb
+
 # Logs
 dev-server.log
