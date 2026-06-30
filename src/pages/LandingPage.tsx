@@ -813,7 +813,7 @@ function Footer() {
   return (
     <footer className="py-10 px-6 md:px-10 border-t" style={{ background: "#060c17", borderColor: "rgba(255,255,255,0.07)" }}>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <img src="/logo-munibrasil.svg" alt="MuniBrasil" className="h-8 w-auto" />
+        <img src="/logo-munibrasil.svg" alt="MuniBrasil" className="h-14 w-auto" />
         <p className="text-xs text-center" style={{ color: MUTED }}>
           © 2026 MuniBrasil · Carlos Carvalho Rocha Advocacia · Todos os direitos reservados
         </p>
